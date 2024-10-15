@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Font?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="FinanceApplication.MainController" hgap="10" vgap="10" alignment="center">
+    <!-- Heading -->
+    <Label text="Finance Application" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" style="-fx-font-size: 24px; -fx-font-weight: bold;" GridPane.halignment="center"/>
+
+    <!-- Income input -->
+    <Label text="Income:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="incomeField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <!-- Expense input -->
+    <Label text="Expenses:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="expenseField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <!-- Result label -->
+    <Label text="Remaining Budget:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <Label fx:id="resultLabel" text="-" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+    <!-- Calculate and clear buttons -->
+    <Button text="Calculate" onAction="#handleCalculateBudget" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <Button text="Clear" onAction="#handleClearFields" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+    <!-- Navigation buttons -->
+    <Button text="Go to Budget" onAction="#goToBudget" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+    <Button text="Go to Income" onAction="#goToIncome" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+    <Button text="Go to Expenses" onAction="#goToExpense" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+    <Button text="Go to Dictionary" onAction="#goToDictionary" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+    <Button text="Go to Dashboard" onAction="#goToDashboard" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+</GridPane>
